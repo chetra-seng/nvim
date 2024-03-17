@@ -9,6 +9,8 @@ local plugins = {
     'ThePrimeagen/harpoon',
     'mbbill/undotree',
     'tpope/vim-fugitive',
+    'nvim-tree/nvim-tree.lua',
+    'nvim-tree/nvim-web-devicons',
     { 
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
