@@ -11,6 +11,7 @@ local plugins = {
     'tpope/vim-fugitive',
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
+    'rcarriga/nvim-notify',
     { 
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
@@ -42,6 +43,23 @@ local plugins = {
             {'saadparwaiz1/cmp_luasnip'},
             {'hrsh7th/cmp-nvim-lua'},
             {'rafamadriz/friendly-snippets'}
+        }
+    },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+            timeout = 2000,
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
         }
     }
 }
